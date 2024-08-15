@@ -1,0 +1,30 @@
+diff --git a/node_modules/@minchat/reactui/dist/reactui.esm.js b/node_modules/@minchat/reactui/dist/reactui.esm.js
+index 44ad2b5..f04b879 100644
+--- a/node_modules/@minchat/reactui/dist/reactui.esm.js
++++ b/node_modules/@minchat/reactui/dist/reactui.esm.js
+@@ -397,7 +397,7 @@ function Inbox({
+       width: "100%"
+     }
+   }, ChatListHeaderComponent(), ChatListComponent()) : /* desktop view */
+-  React.createElement(React.Fragment, null, React.createElement(Sidebar, null, ChatListHeaderComponent(), ChatListComponent()), React.createElement(MessageContainer, null, selectedChat ? React.createElement(React.Fragment, null, MessageListHeaderComponent(), MessageListComponent(), InputComponent()) : React.createElement(MessageListBackground, {
++  React.createElement(React.Fragment, null, React.createElement(MessageContainer, null, selectedChat ? React.createElement(React.Fragment, null, MessageListHeaderComponent(), MessageListComponent(), InputComponent()) : React.createElement(MessageListBackground, {
+     mobileView: determineIsMobile()
+   })))));
+ }
+diff --git a/node_modules/@minchat/reactui/src/components/inbox/index.tsx b/node_modules/@minchat/reactui/src/components/inbox/index.tsx
+index 6ce82a1..00558cc 100644
+--- a/node_modules/@minchat/reactui/src/components/inbox/index.tsx
++++ b/node_modules/@minchat/reactui/src/components/inbox/index.tsx
+@@ -395,10 +395,10 @@ export default function Inbox({
+ 
+           /* desktop view */
+           <>
+-            <Sidebar>
++            {/* <Sidebar>
+               {ChatListHeaderComponent()}
+               {ChatListComponent()}
+-            </Sidebar>
++            </Sidebar> */}
+ 
+             <MessageContainer>
+               {selectedChat ?
