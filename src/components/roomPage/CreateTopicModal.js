@@ -32,7 +32,6 @@ const CreateTopicModal = (props) => {
   const updateCaption = e => {
     if (e.target.value) {
     setCaption(e.target.value)
-    console.log('Checking caption: ' + e.target.value)
     if (e.target.value.length <= 5) {
         setTooShort(true)
     } else {
@@ -63,10 +62,10 @@ const CreateTopicModal = (props) => {
 
   const createTopic = () => {
     
-    // handleClose()
+    handleClose()
     api.post(`/rooms/${roomId}/topics`, {caption: caption, user_id: String(user.user.id), minchat_id: user.user.minchat_id  })
       .then(response => {
-        handleClose()
+        // handleClose()
         navigate(`/chat/${response.data.id}`)
       })
       .catch(error => {
