@@ -1,10 +1,9 @@
 import * as React from 'react';
-import { Typography, Grid, Stack, Fab } from '@mui/material';
+import { Typography, Grid, Stack, Fab, Box } from '@mui/material';
 import RoomCard from './roomPage/RoomCard';
 import TopicList from './roomPage/TopicList';
 import CreateTopicModal from './roomPage/CreateTopicModal';
 import AddIcon from '@mui/icons-material/Add';
-import { userContext } from '../state/userState';
 import api from '../api';
 
 export default function RoomPage() {
@@ -36,8 +35,10 @@ export default function RoomPage() {
                 justifyContent="center"
                 alignItems="center"
             >
-                <Typography variant="h2"> SecretTalks.app </Typography>
-                <Typography variant="subtitle1" gutterBottom> Safespace to find an anomyous partner </Typography>
+                <Box sx={{marginTop:"25px"}}>
+                <Typography variant="h3" sx={{textAlign:"center"}}> SecretTalks.app </Typography>
+                <Typography variant="subtitle1" gutterBottom sx={{textAlign:"center"}}> Safespace to find an anomyous partner </Typography>
+                </Box>
             </Grid>
             <Grid
                 container
@@ -48,14 +49,9 @@ export default function RoomPage() {
                 <RoomCard room={room} setRoom={setRoom} />
 
             </Grid>
-            <Grid
-                container
-                direction="column"
-                justifyContent="center"
-                alignItems="center"
-            >
+
             <TopicList roomId={room.id} />
-            </Grid>
+
             {/* <Grid
                 container
                 direction="column"

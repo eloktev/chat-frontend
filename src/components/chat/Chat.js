@@ -47,6 +47,7 @@ export default function Chat({
         <MinChatUI
                 // startConversation={()=>  {topic.author_id == user.user.id ? String(topic.respondee_id): String(topic.author_id)}}
                 // startConversation={}
+                mobileView={false}
                 theme='#6ea9d7'
                 height='100vh'
                 apiKey='CLZAZGJBC0C4T3MG9HNS2HVGT'
