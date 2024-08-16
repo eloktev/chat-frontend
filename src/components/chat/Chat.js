@@ -41,7 +41,7 @@ export default function Chat({
         if (topicStatus == "CLOSED" || (topicAuthorId && topicRespondeeId && user.user.id && topicAuthorId != user.user.id && topicRespondeeId != user.user.id)) {
             navigate(`/`)
         }
-      }, [user, topicStatus, navigate, topicAuthorId, topicRespondeeId])
+      }, [user, topicStatus, navigate, topicAuthorId, topicRespondeeId, chatId])
 
     return(
         <MinChatUI
