@@ -49,7 +49,7 @@ export default function Chat({
                 // startConversation={}
                 mobileView={false}
                 theme='#6ea9d7'
-                // height='100%'
+                height='100dvh'
                 apiKey='CLZAZGJBC0C4T3MG9HNS2HVGT'
                 user={{
                     username: userFingerprint,
